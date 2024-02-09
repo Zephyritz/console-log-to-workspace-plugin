@@ -54,7 +54,7 @@ public class ConsoleLogToWorkspaceBuildStep extends Builder implements SimpleBui
     public void perform(@Nonnull Run<?, ?> build, @Nonnull FilePath workspace,
             @Nonnull Launcher launcher, @Nonnull TaskListener listener) throws InterruptedException, IOException {
         ConsoleLogToWorkspace.perform(build, workspace, listener,
-            writeConsoleLog, fileName, blockOnAllOutput);
+            writeConsoleLog, fileName, blockOnAllOutput, 1048576, 300);
     }
 
     @Override
