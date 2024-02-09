@@ -56,7 +56,7 @@ public class ConsoleLogToWorkspacePublisher extends Recorder {
     @Override
     public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
         return ConsoleLogToWorkspace.perform(build, build.getWorkspace(), listener,
-            writeConsoleLog, fileName, blockOnAllOutput);
+            writeConsoleLog, fileName, blockOnAllOutput, 1048576, 300);
     }
 
     @Override
